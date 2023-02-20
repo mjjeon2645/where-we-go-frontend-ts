@@ -10,7 +10,10 @@
     "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx .",
     "test": "jest",
     "coverage": "jest --coverage --coverage-reporters html",
-    "watch:test": "jest --watchAll"
+    "watch:test": "jest --watchAll",
+    "codeceptjs": "codeceptjs run --steps",
+    "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+    "codeceptjs:ui": "codecept-ui --app"
   },
   "repository": {
     "type": "git",
@@ -24,15 +27,20 @@
   },
   "homepage": "https://github.com/mjjeon2645/where-we-go-frontend-ts#readme",
   "devDependencies": {
+    "@codeceptjs/configure": "^0.10.0",
+    "@codeceptjs/ui": "^0.5.0",
     "@swc/core": "^1.3.35",
     "@swc/jest": "^0.2.24",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.4.0",
+    "@types/node": "^18.14.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.52.0",
     "@typescript-eslint/parser": "^5.52.0",
+    "codeceptjs": "^3.4.1",
     "eslint": "^8.34.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.27.5",
@@ -43,11 +51,24 @@
     "jest-environment-jsdom": "^29.4.3",
     "parcel": "^2.8.3",
     "parcel-reporter-static-files-copy": "^1.5.0",
+    "playwright": "^1.30.0",
     "process": "^0.11.10",
+    "ts-node": "^10.9.1",
     "typescript": "^4.9.5"
   },
   "dependencies": {
+    "@types/react-datepicker": "^4.8.0",
+    "@types/styled-react-modal": "^1.2.2",
+    "axios": "^1.3.3",
+    "date-fns": "^2.29.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-datepicker": "^4.10.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.1",
+    "react-youtube": "^10.1.0",
+    "styled-components": "^5.3.6",
+    "styled-react-modal": "^3.0.1",
+    "styled-reset": "^4.4.5",
+    "usehooks-ts": "^2.9.1"
   }
 }
